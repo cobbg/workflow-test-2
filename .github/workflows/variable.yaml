@@ -23,5 +23,4 @@ jobs:
     steps:
       - name: Generate string
         id: generate
-          #run: echo "::set-output name=result:: Hello from the shared workflow"
-        run: echo "This is a test"
+        run: echo "::set-output name=result:: Hello from the shared workflow"
