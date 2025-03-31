@@ -21,7 +21,10 @@ jobs:
     outputs:
       result: ${{ steps.generate.outputs.result }}
     steps:
-      - name: Generate string
-        id: generate
-          #run: echo "::set-output name=result:: Hello from the shared workflow"
-        run: echo "${{ inputs.some-input }}"
+      - name: Create file with string
+        run: |
+          echo "This is the string being passed ${{ inputs.some-input }}." > string
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: testing-artifact
