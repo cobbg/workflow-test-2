@@ -9,6 +9,11 @@ on:
       some-input:
         required: true
         type: string
+  workflow_call:
+    inputs:
+      some-input:
+        required: true
+        type: string
 
 jobs:
   generate-string:
