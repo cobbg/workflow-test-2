@@ -23,7 +23,7 @@ jobs:
     steps:
       - name: Create file with string
         run: |
-          echo "This is the string being passed ${{ inputs.some-input }}." > string
+          echo "This is the string being passed: ${{ inputs.some-input }}." > string
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
