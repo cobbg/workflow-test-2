@@ -4,6 +4,11 @@ name: CI
 
 # Controls when the workflow will run
 on:
+  workflow_dispatch:
+    inputs:
+      some-input:
+        required: true
+        type: string
   workflow_call:
     inputs:
       some-input:
