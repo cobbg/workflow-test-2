@@ -17,6 +17,7 @@ on:
 
 jobs:
   generate-string:
+    name: generate-string
     runs-on: ubuntu-latest
     outputs:
       result: ${{ steps.generate.outputs.result }}
